@@ -1,0 +1,6 @@
+in php    : <?php echo $i?>
+
+in blade : {{$i}}
+
+
+
