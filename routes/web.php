@@ -42,7 +42,11 @@ Route::post('/usersForm',[userscontroller::class , 'getdata']);
 Route::view("login","usersForm");
 Route::view("hello",'/hello');
 Route::view("noaccess",'/noaccess');
-Route::view("home",'/home');
+
+#       group middleware
+Route::group(['middleware'=>['protectedPage']],function(){
+        Route::view("home",'/home');
+});
 
 
 
