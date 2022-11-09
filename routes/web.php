@@ -6,6 +6,8 @@ use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\postController;
+use App\Http\Controllers\sessionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userscontroller;
 /*
@@ -58,3 +60,13 @@ Route::get('/fluent-string',[fluentController::class , 'index'])->name('fluent.i
 Route::get('/hi',[UserController::class,'index']);
 Route::get('/login',[loginController::class , 'index'])->name('login.index');
 Route::post('/login',[loginController::class,'loginSubmit'])->name('login.submit');
+Route::get('/session',[sessionController::class,'getSessionData'])->name('session.getSessionData');
+Route::get('/session/set',[sessionController::class,'storeSessionData'])->name('session.storeData');
+Route::get('/session/remove',[sessionController::class,'deleteSessionData'])->name('session.delete');
+Route::get('/posts',[postController::class , 'getAllPost'])->name('posts.getAllPost');
+Route::get('/addPost',[postController::class,'addPost'])->name('posts.addPost');
+Route::post('/addPost',[postController::class,'addPostSubmit'])->name('posts.addPostSubmit');
+Route::get('/getPost/{id}',[postController::class,'readPostById'])->name('posts.readPostById');
+Route::get('/deletePost/{id}',[postController::class,'deletePostById'])->name('posts.deletePostById');
+Route::get('/editPost/{id}',[postController::class,'updatePostById'])->name('posts.updatePostById');
+Route::post('/updatePost',[postController::class,'updatePostByIdSubmit'])->name('posts.updatePostByIdSubmit');
