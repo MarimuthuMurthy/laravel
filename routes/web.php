@@ -41,6 +41,9 @@ Route::view("contact",'/contact');
 Route::post('/usersForm',[userscontroller::class , 'getdata']);
 Route::view("login","usersForm");
 Route::view("hello",'/hello');
+Route::view("noaccess",'/noaccess');
+Route::view("home",'/home');
+
 
 
 

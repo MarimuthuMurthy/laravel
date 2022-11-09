@@ -20,3 +20,14 @@ step 2 :
 
 
 
+MIDDLEWARE :
+************
+* used for authentication purpose .
+types of middleware :
+*********************
+* global middleware
+* routed middleware
+* grouped middleware
+
+
+
