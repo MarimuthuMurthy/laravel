@@ -4,3 +4,19 @@ in blade : {{$i}}
 
 
 
+flow :
+******
+
+views : usersForm.blade.php
+
+        * contain username and password in page
+        * csrf provides secuirty token .
+        * submit button take action in same page and add method "POST"
+
+step 2 :
+********
+        * web contains /userform and pass controller with method
+        * that method executes .
+
+
+

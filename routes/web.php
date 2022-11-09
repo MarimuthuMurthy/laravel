@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
+Use App\Http\Controllers\userscontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,9 @@ Route::view("contact",'/contact');
 
         # for calling controller method 
 #            Route::get("path","controller file")
-Route::get('/user',[Users::class,'loadview']);
+# Route::get('/user',[Users::class,'loadview']);
+Route::post('/usersForm',[userscontroller::class , 'getdata']);
+Route::view("login","usersForm");
 Route::view("hello",'/hello');
 
 

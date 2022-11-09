@@ -1,4 +1,11 @@
 <h1>Users page {{$name}}</h1>
+@include('innerUser') 
+
+
+
+@csrf
+
+
 
 @if($name=='anil')
 <h3>hi {{$name}}</h3>
