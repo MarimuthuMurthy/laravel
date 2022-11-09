@@ -3,9 +3,10 @@
 <head>
     <title>User Login</title>
 </head>
+
 <body>
     <h1>User login</h1>
-    <form action="usersForm" method = 'post'>
+    <form action="usersForm" method='post'>
         @csrf
         <p>
             <label for="">Username</label>
@@ -24,4 +25,5 @@
         </p>
     </form>
 </body>
+
 </html>
