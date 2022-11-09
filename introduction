@@ -26,7 +26,7 @@ MIDDLEWARE :
 types of middleware :
 *********************
 * global middleware
-* routed middleware
+* routed middleware  : middleware applied for specified route .
 * grouped middleware
 
 

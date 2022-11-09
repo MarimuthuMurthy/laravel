@@ -40,7 +40,7 @@ Route::view("contact",'/contact');
 # Route::get('/user',[Users::class,'loadview']);
 Route::post('/usersForm',[userscontroller::class , 'getdata']);
 Route::view("login","usersForm");
-Route::view("hello",'/hello');
+Route::view("hello",'/hello')->middleware('protectedPage1');
 Route::view("noaccess",'/noaccess');
 
 #       group middleware
