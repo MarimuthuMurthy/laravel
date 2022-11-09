@@ -5,6 +5,8 @@ use App\Http\Controllers\fluentController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\userscontroller;
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +55,6 @@ Route::get('/add-posts',[clientController::class,'addPost']);
 Route::get('/update-posts',[clientController::class,'updatePost']);
 Route::get('/delete/{id}',[clientController::class,'deletePost']);
 Route::get('/fluent-string',[fluentController::class , 'index'])->name('fluent.index');
+Route::get('/hi',[UserController::class,'index']);
+Route::get('/login',[loginController::class , 'index'])->name('login.index');
+Route::post('/login',[loginController::class,'loginSubmit'])->name('login.submit');
