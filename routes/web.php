@@ -6,6 +6,7 @@ use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\mailController;
 use App\Http\Controllers\paginationController;
 use App\Http\Controllers\postController;
 use App\Http\Controllers\sessionController;
@@ -85,3 +86,4 @@ Route::get('/users',[paginationController::class,'allUsers'])->name('users.allUs
 Route::get('/payment',function(){
         return Payment::process();
 });
+Route::get('/send-mail',[mailController::class , 'sendEmail'])->name('mail.sendEmail');
