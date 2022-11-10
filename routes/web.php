@@ -11,6 +11,8 @@ use App\Http\Controllers\postController;
 use App\Http\Controllers\sessionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userscontroller;
+use App\paymentGateway\payment;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,3 +82,6 @@ Route::get('/home',function(){return view('index');});
 Route::get('/about',function(){return view('about');});
 Route::get('/contact',function(){return view('contact');});
 Route::get('/users',[paginationController::class,'allUsers'])->name('users.allUsers');
+Route::get('/payment',function(){
+        return Payment::process();
+});
