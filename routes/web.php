@@ -70,3 +70,7 @@ Route::get('/getPost/{id}',[postController::class,'readPostById'])->name('posts.
 Route::get('/deletePost/{id}',[postController::class,'deletePostById'])->name('posts.deletePostById');
 Route::get('/editPost/{id}',[postController::class,'updatePostById'])->name('posts.updatePostById');
 Route::post('/updatePost',[postController::class,'updatePostByIdSubmit'])->name('posts.updatePostByIdSubmit');
+Route::get('/innerJoin',[postController::class,'innerJoinClause'])->name('post.innerJoinClause');
+Route::get('/leftJoin',[postController::class,'leftJoinClause'])->name('post.leftJoinClause');
+Route::get('/rightJoin',[postController::class,'rightJoinClause'])->name('post.rightJoinClause');
+Route::get('/allPostsModel',[postController::class , 'getAllPostsUsingModel'])->name('posts.getAllPostsUsingModel');
