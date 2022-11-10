@@ -74,3 +74,7 @@ Route::get('/innerJoin',[postController::class,'innerJoinClause'])->name('post.i
 Route::get('/leftJoin',[postController::class,'leftJoinClause'])->name('post.leftJoinClause');
 Route::get('/rightJoin',[postController::class,'rightJoinClause'])->name('post.rightJoinClause');
 Route::get('/allPostsModel',[postController::class , 'getAllPostsUsingModel'])->name('posts.getAllPostsUsingModel');
+Route::view('test','/test');
+Route::get('/home',function(){return view('index');});
+Route::get('/about',function(){return view('about');});
+Route::get('/contact',function(){return view('contact');});
